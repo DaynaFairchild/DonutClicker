@@ -18,7 +18,9 @@ resetGame(){
     }
 
     getDonutCount(){
+        
       return Math.round(this.donutCount);
+
     }
     donutOnClick(){
         this.donutCount += this.donutsEarned;

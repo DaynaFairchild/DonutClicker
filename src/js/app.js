@@ -16,11 +16,7 @@ const myDonut = new DonutShop();
           
     myDonut.donutOnClick();
     playDonutDing();
-    if(!myDonut.spoilHasRun && myDonut.getDonutCount() >= 100){
-        on();
-        myDonut.spoilHasRun = true;
-    }
-    myDonut.spoilDonut();
+   
     numberOfDonutsDisplay.innerText = myDonut.getDonutCount();
         
     });
@@ -45,8 +41,6 @@ const myDonut = new DonutShop();
         myDonut.resetGame();
     });
 
-
-    
 
  function changeImg()
  {
@@ -107,6 +101,11 @@ function update()
     currentBakerPrice.innerText = myDonut.priceForBaker;
     checkBakerButton();
     checkOvenButton();
+    if(!myDonut.spoilHasRun && myDonut.getDonutCount() >= 100){
+        on();
+        myDonut.spoilHasRun = true;
+    }
+    myDonut.spoilDonut();
 }
 
 function checkBakerButton()
