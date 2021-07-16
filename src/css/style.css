@@ -19,9 +19,14 @@
   
   .intro{
       color:#5b5b5b;
-      text-shadow: #ff81d7;
       background-color: white;
       padding:5%;
+      border: 45px solid transparent; 
+      border-image: url(/images/DonutBlue.png);
+      border-image-width: inherit;
+      font-size: 25px;
+      
+      
   }
 
 .header{
@@ -40,7 +45,8 @@
   font-family:monospace;
   color: white;
   font-weight: bold;
-  font-size: 20px;
+  font-size: 25px;
+  padding: 30px;
 }
 .numberOfDonutsDisplay{
   margin: auto;
@@ -63,7 +69,6 @@
 .grid-container {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr; 
-    
     padding: 15px;
     position:static;
   } 
@@ -72,6 +77,9 @@
   /* grid-column: 1;  */
   display:block;
   text-align: center;
+  background-color: #b3ddff;
+  border-radius: 15px;
+  
 
 
   }
@@ -80,13 +88,14 @@
   display:block;
   text-align: center;
 
-padding-right: 10px;
+  padding-right: 10px;
   }
   .newOvenClick{
 /* grid-column: 3; */
-display:block;
-text-align: center;
-padding-left: 10px;
+  display:block;
+  text-align: center;
+  background-color: #b3ddff;
+  border-radius: 15px;
 
   }
   /* #grid-item {
@@ -185,16 +194,18 @@ padding-left: 10px;
 #flavorText1{
   text-align: center;
   background-color: #b3ddff;
-  border-radius: 15px;
   font-size: 20px;
+  padding-top: 10px;
+  padding-bottom: 10px;
   
 
 }
 #flavorText2{
   text-align: center;
-  background-color: #b3ddff;
-  border-radius: 15px;
+  background-color: #ffccee;
   font-size: 20px; 
+  padding-top: 10px;
+  padding-bottom: 10px;
 
 }
 #overlay {
