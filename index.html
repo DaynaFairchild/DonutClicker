@@ -9,14 +9,26 @@
     <link rel="shortcut icon" href="/images/DonutBeforeClick.png" type="image/png">
     <title>Donut Clicker</title>
 </head>
-
+<canvas id="canvas" width="90" height="100"></canvas>
     <body class="body">
-        <canvas id="canvas" width="100" height="100"></canvas>
+        
+        <audio id="yayAudio">
+            <source src="images/yay.mp3">
+        </audio>
+        <audio id="donutClickAudio">
+            <source src="images/donutDing.flac">
+        </audio>
+        <audio id="bakerClickAudio">
+            <source src="images/meow.mp3">
+        </audio>
+        <audio id="ovenClickAudio">
+            <source src="images/ding.mp3">
+        </audio>
         <header class="header">
         <img class= "pageBanner" src="/images/DaynasDonutsBannerGray.png" width="610" height="210" > </img>
-        <img class= "boxOfDonuts" type="button"  src="/images/DonutBoxPink.png" width="323" height="265" > </img>
+        <img class= "boxOfDonuts" onclick="spawnBurst()" src="/images/DonutBoxPink.png" width="323" height="265" > </img>
         </header>
-        <!-- <button onclick="spawnBurst()" class= "btn btn-danger">Rain</button>  -->
+        
         
         <div class="topnav">
             <a class="active" href="#home">Home</a>
@@ -24,7 +36,6 @@
             <a href="/about.html">About</a>
           </div>
           <section class="intro">
-
             <!-- <button onclick="bakerBtnSound()">meow</button> -->
               <h3>Welcome to Dayna's Donuts! Starting your donut empire is only a click away. </h3> 
            <strong>How to play: </strong> Click on the "Bake" button below to make donuts. Then spend donuts to buy cat bakers who will do some baking for you. With their help and your clicks you can get enough donuts to buy new ovens that allow you to multiply your creation rate. Nothing in life is free and the market is everchanging so the prices will increase after each purchase. After reaching 100 donuts some of them will begin to spoil. Hoarding perishable goods is no use. Spending them back down below 100 to keep them from spoiling.
@@ -38,7 +49,7 @@
                 Spend your donuts before they spoil!
             </p>
             <br>
-            <img src="images/SpoiledFly.gif" height= "200">
+            <img class = "spoiled" src="images/SpoiledFly.gif" height= "200">
             <br>
             <br>
             <br>
@@ -46,17 +57,19 @@
         </div>
 
             
-                <section class= "numberOfDonuts">Number of donuts: <div class = "numberOfDonutsDisplay" ></div> </section>
+                <section class= "numberOfDonuts">Number of donuts:  <div class = "numberOfDonutsDisplay" ></div> </section>
                     <main class= "main" >
                         <section class="grid-container">
+                            
                             <div class="donutClick" id="grid-item" >
-                                <img src="/images/DonutBeforeClick.png" id ="donutImg" width="250" height="250"> 
+                                <img src="/images/DonutBeforeClick.png" id ="donutImg" width="350" height="350"> 
+                                <!-- <button onclick="spawnBurst()" class= "btn btn-danger">Rain</button> -->
+                                <br>
                                 <br>
                                 <br>
                                 <button class="donut" onclick="changeImg()" value="Change">Bake</button>
-                                <br>
-                                <br>
-                                <img src="images/Donuts (1).gif" width="225" height="225">
+                                
+                                <!-- <img src="images/Donuts (1).gif" width="225" height="225"> -->
                             </div>
                             
                             <div class= "bakerClick" id="grid-item">

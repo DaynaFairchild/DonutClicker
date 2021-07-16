@@ -15,6 +15,7 @@ const myDonut = new DonutShop();
     makedonut.addEventListener("click", function(){
           
     myDonut.donutOnClick();
+    playDonutDing();
     if(!myDonut.spoilHasRun && myDonut.getDonutCount() >= 100){
         on();
         myDonut.spoilHasRun = true;
@@ -26,7 +27,7 @@ const myDonut = new DonutShop();
 
     buyBaker.addEventListener("click", function(){  
     myDonut.buyBakerOnClick();
-    //catAudio(); // may or may not work
+    playMeow();
     currentNumberOfBakers.innerText = myDonut.getBakerCount();
     currentBakerPrice.innerText = myDonut.priceForBaker();
     myDonut.startBakerInterval();
@@ -34,6 +35,7 @@ const myDonut = new DonutShop();
 
     buyNewOven.addEventListener("click", function(){
     myDonut.buyNewOvenOnClick();
+    playOvenDing();
     currentNumberOfOvens.innerText = myDonut.getNewOvenCount();
     currentNewOvenPrice.innerText= myDonut.priceForNewOven();
    
@@ -138,25 +140,42 @@ function on() {
     document.getElementById("overlay").style.display = "none";
   }
 
-
-
-    var meow = new Audio();
-    meow.src ="meow.mp3";
+    
     var ding = new Audio();
     ding.src="/images/ding.mp3";
     var donutDing = new Audio();
     donutDing.src = "/images/donutDing.flac"
 
     function bakerBtnSound(){
+        meow.volume = 0.1;
         meow.play();
     }
     function ovenBtnSound(){
+        ding.volume = 0.1;
         ding.play();
     }
     function donutBtnSound(){
+        donutDing.volume = 0.1;
         donutDing.play();
     }
 
+    var meow = document.getElementById("bakerClickAudio");
+
+    function playMeow(){
+        meow.play();
+    }
+
+    var ding = document.getElementById("ovenClickAudio");
+
+    function playOvenDing(){
+        ding.play();
+    }
+
+    var donutDing = document.getElementById("donutClickAudio");
+
+    function playDonutDing(){
+        donutDing.play();
+    }
 
 
 

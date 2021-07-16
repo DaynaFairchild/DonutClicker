@@ -20,11 +20,12 @@
   .intro{
       color:#5b5b5b;
       background-color: white;
-      padding:5%;
+      padding:3%;
       border: 45px solid transparent; 
-      border-image: url(/images/DonutBlue.png);
+      border-image: url(/images/DonutBorder.png) 25% round;
       border-image-width: inherit;
       font-size: 25px;
+      
       
       
   }
@@ -43,7 +44,7 @@
   text-align: center;
   background-color: #b3ddff;
   font-family:monospace;
-  color: white;
+  color: #5b5b5b;
   font-weight: bold;
   font-size: 25px;
   padding: 30px;
@@ -65,11 +66,14 @@
 
 .main{
   background-color: #ffccee;
+  font-family: monospace;
+  font-weight: bold;
 }
 .grid-container {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr; 
     padding: 15px;
+    padding-bottom: 20px;
     position:static;
   } 
 
@@ -79,16 +83,15 @@
   text-align: center;
   background-color: #b3ddff;
   border-radius: 15px;
+  padding-top: 20px;
   
-
-
   }
   .bakerClick{
   /* grid-column: 2; */
   display:block;
   text-align: center;
-
-  padding-right: 10px;
+  padding-top: 20px;
+  padding-bottom: 20px;
   }
   .newOvenClick{
 /* grid-column: 3; */
@@ -96,6 +99,8 @@
   text-align: center;
   background-color: #b3ddff;
   border-radius: 15px;
+  padding-top: 20px;
+  padding-bottom: 20px;
 
   }
   /* #grid-item {
@@ -159,20 +164,16 @@
     background-color: #ff81d7;
     color: white;
   }
- /* the flavor text instructions*/
-  /* .flavortext1 {
-    margin: auto;
-    text-align:center;
-  } */
+ 
   
  #numberbox{
   margin: auto;
   text-align:center;
   font-size: 20px;
   font-weight: bold;
-  border:2px solid;
+  border:4px solid;
   border-color:#ff81d7 ;
-  border-radius:5px;
+  border-radius: 10px;
   background-color:white;
   width:55px;
   height:25px;
@@ -183,9 +184,9 @@
   text-align:center;
   font-size: 20px;
   font-weight: bold;
-  border:2px solid;
+  border:4px solid;
   border-color:#ff81d7 ;
-  border-radius:5px;
+  border-radius:10px;
   background-color:white;
   width: 55px;
   height: 25px;
@@ -197,6 +198,7 @@
   font-size: 20px;
   padding-top: 10px;
   padding-bottom: 10px;
+  color:#5b5b5b; 
   
 
 }
@@ -206,6 +208,7 @@
   font-size: 20px; 
   padding-top: 10px;
   padding-bottom: 10px;
+  color:#5b5b5b; 
 
 }
 #overlay {
@@ -225,6 +228,9 @@
 }
 #overlayContext{
   top:50%;
+}
+.spoiled{
+  user-select: none;
 }
 #warning{
   font-size: 60px; 
@@ -246,6 +252,7 @@ button{
   border-radius: 15px;
   border-width: 5px;
   text-align:center;
+  z-index: 2;
 }
 button:hover {
   background-color: #81c7ff;
@@ -255,6 +262,13 @@ button:hover {
 .mainAbout{
 text-align: center;
 font-family: monospace;
+background-color: #bce1ff;
+color:#5b5b5b;     
+border: 45px solid transparent; 
+border-image: url(/images/PawBorder.png) 20% round;
+border-image-width: inherit;
+font-size: 20px;
+padding: 0;
 }
 .Me{
   border-radius: 25px;
@@ -262,8 +276,8 @@ font-family: monospace;
 
 /* Confetti */
 #canvas{
-  position: absolute;
+  position: fixed;
   top: 0px;
   left: 0px;
-  z-index: 3;
+  z-index: -1;
 }

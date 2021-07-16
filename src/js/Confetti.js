@@ -33,12 +33,14 @@ function randomIntFromInterval(min, max) {
              this.y = 0; 
              this.xMomentum = randomIntFromInterval(-3, 3) * Math.random(); 
              this.yMomentum = gravity;
+             this.Image = srcArray[randomIntFromInterval(0,srcArray.length -1)]
+             this.size = 3 * Math.max(Math.random(), .3);
         // opacity
      }
      draw(){
          context.globalAlpha = 1;
-         donut.src = srcArray[randomIntFromInterval(0,srcArray.length -1)]
-         context.drawImage(donut,this.x, this.y, 20, 20);
+         donut.src = this.Image;
+         context.drawImage(donut,this.x, this.y, this.size*30, this.size*30);
      }
      update(i){
          this.y -= this.yMomentum;
@@ -66,7 +68,7 @@ function randomIntFromInterval(min, max) {
         this.opacity -= .01;
         this.opacity = Math.max(0, this.opacity);
         context.globalCompositeOperation = "destination-over";
-        context.drawImage(altDonut, this.x, this.y, 20, 20)
+        context.drawImage(altDonut, this.x, this.y, 40, 40);
     }
     update(i){
         this.y -= this.yMomentum;
@@ -87,8 +89,9 @@ function randomIntFromInterval(min, max) {
 
  function animate(){
      requestAnimationFrame(animate);
-     canvas.width = window.innerWidth; // dynamically changes the width of the canvas
+     canvas.width = window.innerWidth - 44; // dynamically changes the width of the canvas
      canvas.height = window.innerHeight;
+     //canvas.top = window.pageYOffset;
      context.clearRect(0,0,innerWidth, innerHeight);
      if(keepSpawning && particleArray.length < maxSize){
          particleArray.push(new Particle());
@@ -103,26 +106,36 @@ function randomIntFromInterval(min, max) {
          keepSpawning = !keepSpawning; 
   }    
   
+function resetStyle(){
+    canvas.style.zIndex = -1;
+}
+
+let styleInterval = null;
+
  function spawnBurst()
  {
+     confettiYay();
          if(keepSpawning){
              keepSpawning = false;
              spawnInterval = null;
+             styleInterval = null;
          }
          else{
              keepSpawning = true;
+             canvas.style.zIndex = 3;
              spawnInterval = setTimeout(spawnManyParticles, 2000);
+             styleInterval = setTimeout(resetStyle, 5000);
          }
  
  }
 //creepy "yay" to play with confetti
- var yay = new Audio();
-    yay.src = "/images/yay.mp3"
+ var yay = document.getElementById("yayAudio");
 
-    function confettiYay(){
-        yay.play();
-    }
-
+function confettiYay(){
+    console.log("Played the yay audio!")
+    yay.volume = 0.2;
+    yay.play();
+}
 
  init();
  animate();
