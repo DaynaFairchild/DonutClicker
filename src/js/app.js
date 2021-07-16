@@ -140,6 +140,24 @@ function on() {
 
 
 
+    var meow = new Audio();
+    meow.src ="meow.mp3";
+    var ding = new Audio();
+    ding.src="/images/ding.mp3";
+    var donutDing = new Audio();
+    donutDing.src = "/images/donutDing.flac"
+
+    function bakerBtnSound(){
+        meow.play();
+    }
+    function ovenBtnSound(){
+        ding.play();
+    }
+    function donutBtnSound(){
+        donutDing.play();
+    }
+
+
 
 
 

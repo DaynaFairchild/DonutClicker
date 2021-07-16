@@ -17,14 +17,17 @@
         <img class= "boxOfDonuts" type="button"  src="/images/DonutBoxPink.png" width="323" height="265" > </img>
         </header>
         <!-- <button onclick="spawnBurst()" class= "btn btn-danger">Rain</button>  -->
+        
         <div class="topnav">
             <a class="active" href="#home">Home</a>
             <a id="newGame" href="#newGame">New Game</a> 
-            <a href="#about">About</a>
+            <a href="/about.html">About</a>
           </div>
           <section class="intro">
+
+            <!-- <button onclick="bakerBtnSound()">meow</button> -->
               <h3>Welcome to Dayna's Donuts! Starting your donut empire is only a click away. </h3> 
-           <strong>How to play: </strong> Click on the donut to make donuts. Then spend donuts to buy cat bakers who will do some baking for you. With their help and your clicks you can get enough donuts to buy new ovens that allow you to multiply your creation rate.
+           <strong>How to play: </strong> Click on the "Bake" button below to make donuts. Then spend donuts to buy cat bakers who will do some baking for you. With their help and your clicks you can get enough donuts to buy new ovens that allow you to multiply your creation rate. Nothing in life is free and the market is everchanging so the prices will increase after each purchase. After reaching 100 donuts some of them will begin to spoil. Hoarding perishable goods is no use. Spending them back down below 100 to keep them from spoiling.
         </section>
         <div id="overlay">
             <div id ="overlayContext">
@@ -49,7 +52,11 @@
                             <div class="donutClick" id="grid-item" >
                                 <img src="/images/DonutBeforeClick.png" id ="donutImg" width="250" height="250"> 
                                 <br>
+                                <br>
                                 <button class="donut" onclick="changeImg()" value="Change">Bake</button>
+                                <br>
+                                <br>
+                                <img src="images/Donuts (1).gif" width="225" height="225">
                             </div>
                             
                             <div class= "bakerClick" id="grid-item">

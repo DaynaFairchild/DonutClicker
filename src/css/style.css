@@ -64,25 +64,29 @@
     display: grid;
     grid-template-columns: 1fr 1fr 1fr; 
     
-    padding: 10px;
+    padding: 15px;
     position:static;
   } 
 
   .donutClick{
-grid-column: 1; 
-display:block;
-text-align: center;
+  /* grid-column: 1;  */
+  display:block;
+  text-align: center;
+
 
   }
   .bakerClick{
-grid-column: 2;
-display:block;
-text-align: center;
+  /* grid-column: 2; */
+  display:block;
+  text-align: center;
+
+padding-right: 10px;
   }
   .newOvenClick{
-grid-column: 3;
+/* grid-column: 3; */
 display:block;
 text-align: center;
+padding-left: 10px;
 
   }
   /* #grid-item {
@@ -237,7 +241,13 @@ button:hover {
   color:white;
 }
 
-
+.mainAbout{
+text-align: center;
+font-family: monospace;
+}
+.Me{
+  border-radius: 25px;
+}
 
 /* Confetti */
 #canvas{

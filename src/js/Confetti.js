@@ -115,5 +115,14 @@ function randomIntFromInterval(min, max) {
          }
  
  }
+//creepy "yay" to play with confetti
+ var yay = new Audio();
+    yay.src = "/images/yay.mp3"
+
+    function confettiYay(){
+        yay.play();
+    }
+
+
  init();
  animate();
