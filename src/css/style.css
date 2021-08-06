@@ -265,7 +265,7 @@ font-family: monospace;
 background-color: #bce1ff;
 color:#5b5b5b;     
 border: 45px solid transparent; 
-border-image: url(/images/PawBorder.png) 20% round;
+border-image: url(images/PawBorder.png) 20% round;
 border-image-width: inherit;
 font-size: 20px;
 padding: 0;
