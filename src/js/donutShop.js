@@ -12,8 +12,8 @@ resetGame(){
         this.bakerIntervalID = undefined;
         clearInterval(this.spoilIntervalID);
         this.spoilIntervalID = undefined;
-        this.priceForBaker= 10;
-        this.priceForNewOven= 10;
+        this.priceForBaker= 50;
+        this.priceForNewOven= 100;
         this.spoilHasRun = false;
     }
 
