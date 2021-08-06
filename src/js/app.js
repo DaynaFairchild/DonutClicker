@@ -45,11 +45,11 @@ const myDonut = new DonutShop();
  function changeImg()
  {
      var image= document.getElementById('donutImg');
-     if (image.src.match("/images/DonutBeforeClick.png")){
-         image.src="/images/DonutOnClick.png";  
+     if (image.src.match("images/DonutBeforeClick.png")){
+         image.src="images/DonutOnClick.png";  
     }
     else{
-        image.src="/images/DonutBeforeClick.png"
+        image.src="images/DonutBeforeClick.png"
      } 
  }
 
@@ -66,11 +66,11 @@ function changeImg2()
 {
     var image = document.getElementById('bakerGif');
     if(!bakerAnim){ // animation is not playing
-        image.src="/images/CatClickNoLoop.gif";
+        image.src="images/CatClickNoLoop.gif";
         bakerAnim = true;
         bakerTimer = setTimeout(changeImg2, 2000);  
     } else {
-        image.src="/images/catBakerGif.gif"
+        image.src="images/catBakerGif.gif"
         bakerAnim = false;
         bakerTimer = null;
     }
@@ -82,11 +82,11 @@ function changeImg3()
 {
     var image = document.getElementById('newOvenImg');
     if(!ovenAnim){ // animation is not playing
-        image.src="/images/NewOvenClickNoLoop.gif";
+        image.src="images/NewOvenClickNoLoop.gif";
         ovenAnim = true;
         ovenTimer = setTimeout(changeImg3, 2000);  
     } else {
-        image.src="/images/NewOven.png"
+        image.src="images/NewOven.png"
         ovenAnim = false;
         ovenTimer = null;
     }
@@ -141,9 +141,9 @@ function on() {
 
     
     var ding = new Audio();
-    ding.src="/images/ding.mp3";
+    ding.src="images/ding.mp3";
     var donutDing = new Audio();
-    donutDing.src = "/images/donutDing.flac"
+    donutDing.src = "images/donutDing.flac"
 
     function bakerBtnSound(){
         meow.volume = 0.1;

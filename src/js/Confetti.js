@@ -4,17 +4,17 @@ canvas.width = window.innerWidth;
 canvas.height = window.innerHeight;
 
 let donutBlue = new Image();
-donutBlue.src = '/images/DonutBlue.png';
+donutBlue.src = 'images/DonutBlue.png';
 let donutCream = new Image();
-donutCream.src = '/images/DonutCream.png';
+donutCream.src = 'images/DonutCream.png';
 let donutGlaze = new Image();
-donutBlue.src = '/images/DonutGlaze.png';
+donutBlue.src = 'images/DonutGlaze.png';
 let donutRainbow = new Image();
-donutRainbow.src = '/images/DonutRainbow.png';
+donutRainbow.src = 'images/DonutRainbow.png';
 let donut = new Image();
-donut.src = '/images/DonutBeforeClick.png';
+donut.src = 'images/DonutBeforeClick.png';
 
-let srcArray = ['/images/DonutBlue.png','/images/DonutCream.png','/images/DonutGlaze.png','/images/DonutRainbow.png','/images/DonutBeforeClick.png']
+let srcArray = ['images/DonutBlue.png','images/DonutCream.png','images/DonutGlaze.png','images/DonutRainbow.png','images/DonutBeforeClick.png']
 
 const maxSize = 200;
 

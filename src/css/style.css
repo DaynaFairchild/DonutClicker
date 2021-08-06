@@ -22,7 +22,7 @@
       background-color: white;
       padding:3%;
       border: 45px solid transparent; 
-      border-image: url(/images/DonutBorder.png) 25% round;
+      border-image: url(images/DonutBorder.png) 25% round;
       border-image-width: inherit;
       font-size: 25px;
       
